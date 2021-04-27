@@ -20,6 +20,7 @@ import lottie from 'lottie-web';
 import animationDeveloper from '../animations/developer.json';
 import hype from "../images/hype1.png"
 import landdy from "../images/avisual.jpg"
+import me from "../images/me.png"
 
 
 
@@ -202,12 +203,28 @@ const Layout = () => {
     </div> 
 
 
+    <div className="info">
+
+    <div className="wrapper-info">
+    
+    <div className="text-info">
+      <h2>UN JEDI DEL FRONT-END </h2>
+      <p>Soy Pablo Naveira, actualmente desarrollador Front-End. Aún así la vida me ha llevado por muchos caminos desde la producción audiovisual (edición de vídeo, fotografía y audio), producción teatral e incluso en el mundo del márketing. Soy un apasionado del SEO y del inbound márketing. Actualmente me dedico a seguir aprendiendo nuevas tecnologías web.</p>
+    </div>
+    <div className="img-info">
+    <img src={me} alt="" />
+
+    </div>
+
+
+    </div>
+
+
+    </div>
+
+
     <div className="about">
     <div className="titulo-about">
-      <div className="lines">
-        <div className="line1"></div>
-        <div className="line2"></div>
-      </div>
     <h2>MIS HABILIDADES</h2>
     </div>  
     <div className={buttonClicked ? "close-modal active" : "close-modal"} onClick={handleCloseModal}> <IoIosClose /> </div>
@@ -555,7 +572,7 @@ const Layout = () => {
     </div>
     </div>
     <div className="custom-wave">
-    <svg height="100%" width="100%" id="svg" viewBox="0 0 1440 600" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,600 C 0,600 0,300 0,300 C 77.45454545454547,336.8421052631579 154.90909090909093,373.6842105263158 255,361 C 355.09090909090907,348.3157894736842 477.81818181818176,286.10526315789474 594,261 C 710.1818181818182,235.89473684210526 819.8181818181818,247.89473684210532 910,277 C 1000.1818181818182,306.1052631578947 1070.909090909091,352.3157894736842 1156,359 C 1241.090909090909,365.6842105263158 1340.5454545454545,332.8421052631579 1440,300 C 1440,300 1440,600 1440,600 Z" stroke="none" stroke-width="0" fill="#ffffffff" class="transition-all duration-300 ease-in-out delay-150" transform="rotate(-180 720 300)"></path></svg>
+    <svg height="100%" width="100%" id="svg" viewBox="0 0 1440 400" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,400 C 0,400 0,200 0,200 C 125.53571428571428,196.82142857142856 251.07142857142856,193.64285714285714 366,205 C 480.92857142857144,216.35714285714286 585.2500000000001,242.24999999999997 702,237 C 818.7499999999999,231.75000000000003 947.9285714285716,195.3571428571429 1073,184 C 1198.0714285714284,172.6428571428571 1319.0357142857142,186.32142857142856 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="#ffe156ff" class="transition-all duration-300 ease-in-out delay-150" transform="rotate(-180 720 200)"></path></svg>
     </div>
     </div>
 
@@ -563,10 +580,7 @@ const Layout = () => {
       <div className="container-works">
       <div className="animation" ref={animation}></div>
     <div className="titulo-works">
-      <div className="lines">
-        <div className="line1"></div>
-        <div className="line2"></div>
-      </div>
+      
     <h2>ÚLTIMOS TRABAJOS</h2>
     </div>  
     {hypeOn ?
