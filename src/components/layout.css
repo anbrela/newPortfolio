@@ -15,10 +15,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 html, body {
+  width: 100vw;
   margin: 0;
   padding: 0;
   font-family: 'Barlow Condensed', sans-serif;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .container{
@@ -771,12 +773,18 @@ display: none;
 
 .boton1 {
   top: 20px;
+  width: 80px;
+  height: 80px;
+  font-size: 40px;
   animation: move3 10s linear infinite;
 
 }
 
 .boton2 {
   bottom: 20px;
+  width: 80px;
+  height: 80px;
+  font-size: 40px;
   animation: move2 10s linear infinite;
 
 }
@@ -784,35 +792,55 @@ display: none;
 .boton3 {
   bottom: 20%;
   left: 10%;
+  width: 80px;
+  height: 80px;
+  font-size: 40px;
   animation: move 10s linear infinite;
 }
 
 .boton4 {
   bottom: 20%;
   right: 10%;
+  width: 80px;
+  height: 80px;
+  font-size: 40px;
   animation: move3 10s linear infinite;
 }
 
 .boton5 {
   top: 20%;
   left: 10%;
+  width: 80px;
+  height: 80px;
+  width: 80px;
+  height: 80px;
+  font-size: 40px;
   animation: move 10s linear infinite;
 }
 
 .boton6 {
   top: 20%;
   right: 10%;
+  width: 80px;
+  height: 80px;
+  font-size: 40px;
   animation: move2 10s linear infinite;
 }
 
 .boton7 {
   bottom: 20%;
   left: 45%;
+  width: 80px;
+  height: 80px;
+  font-size: 40px;
   animation: move2 10s linear infinite;
 }
 
 .boton8 {
   top: 20%;
+  width: 80px;
+  height: 80px;
+  font-size: 40px;
   animation: move3 10s linear infinite;
 }
 
@@ -913,7 +941,6 @@ transition: all 1s ease-out;
 }
 
 .item-works h2 {
-  height: 10%;
   font-size: 50px;
   margin-bottom: 10px;
   color: var(--negro);
@@ -1011,6 +1038,9 @@ transition: all 1s ease-out;
 
 .img-info {
   width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .text-info {
@@ -1278,7 +1308,7 @@ transition: all 1s ease-out;
   }
 
   .custom-wave {
-    display: none;
+    bottom: -70px;
   }
 
   .works {
@@ -1309,10 +1339,8 @@ transition: all 1s ease-out;
   } 
 
   .item-works h2 {
-    height: 7%;
     font-size: 30px;
     padding: 10px;
-    padding-top: 0px;
     
   }
 
@@ -1340,8 +1368,80 @@ transition: all 1s ease-out;
     font-size: 12px;
   }
 
+  .wrapper-info {
+    flex-direction: column;
+  }
+
+  .text-info {
+    margin-top: -70px;
+    width: 90%;
+    z-index: 10;
+  }
+
+  .text-info h2 {
+    width: 100%;
+    font-size: 25px;
+    
+  }
+
+  .text-info p {
+    margin-top: -10px;
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .img-info {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+
+  }
+
+  .img-info img {
+    width: 250px;
+    margin: 0;
+  }
+
+
+  .titulo-about {
+    left: 10px;
+    top: -50px;
+    z-index: 10;
+  }
+
+  .titulo-about h2 {
+    font-size: 20px;
+    
+  }
+
+  .titulo-works {
+    left: 15px;
+    top: 30px;
+  }
+
+  .titulo-works h2 {
+    font-size: 20px;
+  }
+
+  .item-works {
+    margin-top: -100px;
+  }
+
+  .angle {
+    margin-top: -70px;
+  }
 
 }
+
+@media (min-width:880px) and (max-width:1100px) {
+  .custom-wave {
+    bottom: -180px;
+  }
+}
+
 
 
 

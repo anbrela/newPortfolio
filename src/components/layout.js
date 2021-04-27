@@ -189,12 +189,10 @@ const Layout = () => {
       <div className={navClicked ? "linea1 active" : "linea1"}></div>
       <div className={navClicked ? "linea2 active" : "linea2"}></div>
       <div className={navClicked ? "enlaces active" : "enlaces"}>
-        <li> <a href="#">INICIO</a> </li>
-        <li> <a href="#">SOBRE MÍ</a> </li>
-        <li> <a href="#">HABILIDADES</a> </li>
-        <li> <a href="#">TRABAJOS</a> </li>
-        <li> <a href="#">CONTACTO</a> </li>
-        <button onclick={handleCloseNav}><GrClose /></button>
+        <li> <a href="#info">SOBRE MÍ</a> </li>
+        <li> <a href="#skills">HABILIDADES</a> </li>
+        <li> <a href="#works">TRABAJOS</a> </li>
+        <button onClick={handleCloseNav}><GrClose /></button>
       </div>
     </div>
 
@@ -203,7 +201,7 @@ const Layout = () => {
     </div> 
 
 
-    <div className="info">
+    <div className="info" id="info">
 
     <div className="wrapper-info">
     
@@ -223,7 +221,7 @@ const Layout = () => {
     </div>
 
 
-    <div className="about">
+    <div className="about" id="skills">
     <div className="titulo-about">
     <h2>MIS HABILIDADES</h2>
     </div>  
@@ -245,7 +243,8 @@ const Layout = () => {
 
     <div className={javascriptClicked ? "javascript active" : "javascript"}>
       <h2>Javascript</h2>
-      <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.</p>
+      <p>El primer lenguaje de programación por el cuál me interesé, llevo aproximadamente un año con él y he realizado multitud de webs y aplicaciones con Javascript. Tras realizar un master online en Udemy y aprender por mi cuenta sobre Jquery y diferentes librerías de uso diario. He utilizado Scroll Magic y Gsap también en diferentes proyectos para realizar animaciones con Scroll. Si quieres ver más proyectos, ponte en contacto conmigo ;)
+      </p>
       <div className="wrapper-progress">
       <div className="progress-bar"></div>
       <div className="pointers">
@@ -281,7 +280,7 @@ const Layout = () => {
 
     <div className={cssClicked ? "css active" : "css"}>
       <h2>Css3</h2>
-      <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.</p>
+      <p>El CSS3 es mi vida, realmente es lo que me mueve, me encanta el diseño web y todo el proceso que conlleva. Desde el primer Sketch hasta su trabajo final de maquetación. He realizado más de 200 webs y he aprendido lo suficiente de diseño y maquetación para considerarme un buen conocedor de la misma y atreverme con cualquier proyecto o animación.</p>
       <div className="wrapper-progress">
       <div className="progress-bar"></div>
       <div className="pointers">
@@ -294,10 +293,10 @@ const Layout = () => {
           Css
         </div>
         <div className="text">
-        Css
+        Saas
         </div>
         <div className="text">
-        Typescript y ES6
+        Tailwind y Bootstrap
         </div>
 
       </div>
@@ -317,7 +316,7 @@ const Layout = () => {
 
     <div className={phpClicked ? "php active" : "php"}>
       <h2>Php</h2>
-      <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.</p>
+      <p>El siguiente lenguaje de programación que me interesó fue PHP. Tras más de 10 años realizando páginas web en wordpress decidí meterme de lleno en el mundo del desarrollo y entender un poco más el código. Antes, sólo Drag and Drop, ahora coding and design. He estudiado en Udemy el master online de Frameworks como Laravel o Symphony. No me considero un experto pero aprendo rápido.</p>
       <div className="wrapper-progress">
       <div className="progress-bar"></div>
       <div className="pointers">
@@ -333,7 +332,7 @@ const Layout = () => {
         Laravel
         </div>
         <div className="text">
-        Synphony
+        Symphony
         </div>
 
       </div>
@@ -353,8 +352,8 @@ const Layout = () => {
 
 
     <div className={tailClicked ? "tail active" : "tail"}>
-      <h2>Tailwind CSS</h2>
-      <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.</p>
+      <h2>Diseño Web</h2>
+      <p>Si estás buscando un diseñador de webs...Has llegado al lugar correcto. Sueño con despertarme y que cada día mis ojos se peleen con una maquetación o con un desarrollo Front End. Domino la edición con Photoshop y Illustrator, también la edición de vídeo. Me gusta el diseño y he cursado un año en la escuela Ramón Falcón de Lugo. </p>
       <div className="wrapper-progress">
       <div className="progress-bar"></div>
       <div className="pointers">
@@ -364,13 +363,13 @@ const Layout = () => {
       </div>  
       <div className="texto-progress">
         <div className="text">
-          Tailwind 
+          Photoshop 
         </div>
         <div className="text">
-        Styles
+        Illustrator
         </div>
         <div className="text">
-        Material UI
+        Sketch
         </div>
 
       </div>
@@ -390,7 +389,7 @@ const Layout = () => {
 
     <div className={gatsbyClicked ? "gatsby active" : "gatsby"}>
       <h2>Gatsby</h2>
-      <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.</p>
+      <p>Esta web está diseñada con Gatsby. He creado webs con el Starter y sin el Starter. Adoro Gatsby por la facilidad para crear páginas webs estáticas que, si no me equivoco son el futuro por su facilidad, velocidad y posicionamiento.</p>
       <div className="wrapper-progress">
       <div className="progress-bar"></div>
       <div className="pointers">
@@ -404,9 +403,6 @@ const Layout = () => {
         </div>
         <div className="text">
         Gatsby SEO
-        </div>
-        <div className="text">
-        Typescript y ES6
         </div>
 
       </div>
@@ -426,7 +422,7 @@ const Layout = () => {
 
     <div className={nodeClicked ? "node active" : "node"}>
       <h2>Node JS</h2>
-      <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.</p>
+      <p>He creado varias apps con NodeJS y React. He creado varias Api Rest y también domino Express y su Routing. Me encantaría seguir aprendiendo y convertirme en un Full Stack without Google. También he realizado una app con chat en tiempo real con Socket.io</p>
       <div className="wrapper-progress">
       <div className="progress-bar"></div>
       <div className="pointers">
@@ -439,10 +435,10 @@ const Layout = () => {
           Node JS
         </div>
         <div className="text">
-        NOSE
+        Express
         </div>
         <div className="text">
-        Typescript y ES6
+        Socket.io
         </div>
 
       </div>
@@ -572,7 +568,7 @@ const Layout = () => {
     </div>
     </div>
     <div className="custom-wave">
-    <svg height="100%" width="100%" id="svg" viewBox="0 0 1440 400" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,400 C 0,400 0,200 0,200 C 125.53571428571428,196.82142857142856 251.07142857142856,193.64285714285714 366,205 C 480.92857142857144,216.35714285714286 585.2500000000001,242.24999999999997 702,237 C 818.7499999999999,231.75000000000003 947.9285714285716,195.3571428571429 1073,184 C 1198.0714285714284,172.6428571428571 1319.0357142857142,186.32142857142856 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="#ffe156ff" class="transition-all duration-300 ease-in-out delay-150" transform="rotate(-180 720 200)"></path></svg>
+    <svg height="100%" width="100%" id="svg" viewBox="0 0 1440 400" xmlns="http://www.w3.org/2000/svg" className="transition duration-300 ease-in-out delay-150"><path d="M 0,400 C 0,400 0,200 0,200 C 125.53571428571428,196.82142857142856 251.07142857142856,193.64285714285714 366,205 C 480.92857142857144,216.35714285714286 585.2500000000001,242.24999999999997 702,237 C 818.7499999999999,231.75000000000003 947.9285714285716,195.3571428571429 1073,184 C 1198.0714285714284,172.6428571428571 1319.0357142857142,186.32142857142856 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" strokeWidth="0" fill="#ffe156ff" className="transition-all duration-300 ease-in-out delay-150" transform="rotate(-180 720 200)"></path></svg>
     </div>
     </div>
 
