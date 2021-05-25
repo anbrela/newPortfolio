@@ -19,8 +19,12 @@ import {FaAngleRight} from "react-icons/fa"
 import lottie from 'lottie-web';
 import animationDeveloper from '../animations/developer.json';
 import hype from "../images/hype1.png"
-import landdy from "../images/avisual.jpg"
+import landdy from "../images/casaalta.png"
+import elanails from "../images/elanails.png"
 import me from "../images/me.png"
+import linkedin from "../images/linkedin.svg"
+import whatsapp from "../images/whatsapp.svg"
+import github from "../images/github.png"
 
 
 
@@ -43,6 +47,7 @@ const Layout = () => {
   const [javaClicked, setJavaClicked] = useState(false);
   const [buttonClicked, setButtonClicked] = useState(false);
   const [hypeOn, setHypeOn] = useState(true);
+  const [elaOn, setElaOn] = useState(false);
   const [landdyOn, setLanndyOn] = useState(false);
 
     //search animation
@@ -57,14 +62,6 @@ const Layout = () => {
       return () => anim.destroy() // optional clean up for unmounting
     }, [animation])
   
-    lottie.loadAnimation({
-      container: animation.current, // current instance of our container!
-      animationData: animationDeveloper, // animation file!
-      renderer: "svg",
-      loop: true,
-      autoplay: true,
-    })
-
   
   const handleAngleHype = () => {
 
@@ -75,6 +72,12 @@ const Layout = () => {
 
   const handleAngleLanddy = () => {
     setLanndyOn(false);
+    setElaOn(true);
+  }
+
+  const handleAngleEla = () => {
+    setElaOn(false);
+    setHypeOn(true);
   }
 
 
@@ -270,7 +273,7 @@ const Layout = () => {
 
       <div className="container-button">
 
-      <button className="btn-works">TRABAJOS</button>
+      <button className="btn-works"> <a href="#works">TRABAJOS</a> </button>
 
       </div>
 
@@ -306,8 +309,7 @@ const Layout = () => {
 
       <div className="container-button">
 
-      <button className="btn-works">TRABAJOS</button>
-
+     <button className="btn-works"> <a href="#works">TRABAJOS</a> </button>
       </div>
 
 
@@ -342,8 +344,7 @@ const Layout = () => {
 
       <div className="container-button">
 
-      <button className="btn-works">TRABAJOS</button>
-
+     <button className="btn-works"> <a href="#works">TRABAJOS</a> </button>
       </div>
 
 
@@ -379,8 +380,7 @@ const Layout = () => {
 
       <div className="container-button">
 
-      <button className="btn-works">TRABAJOS</button>
-
+     <button className="btn-works"> <a href="#works">TRABAJOS</a> </button>
       </div>
 
 
@@ -412,8 +412,7 @@ const Layout = () => {
 
       <div className="container-button">
 
-      <button className="btn-works">TRABAJOS</button>
-
+     <button className="btn-works"> <a href="#works">TRABAJOS</a> </button>
       </div>
 
 
@@ -448,8 +447,7 @@ const Layout = () => {
 
       <div className="container-button">
 
-      <button className="btn-works">TRABAJOS</button>
-
+     <button className="btn-works"> <a href="#works">TRABAJOS</a> </button>
       </div>
 
 
@@ -457,7 +455,7 @@ const Layout = () => {
 
     <div className={wordpressClicked ? "wordpress active" : "wordpress"}>
       <h2>Wordpress</h2>
-      <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.</p>
+      <p>Aquí donde me lees, me considero un diseñador web (es cierto que ahora soy más un desarrollador), llevo más de 10 años diseñado páginas en wordpress y también bocetando diseños UX y UI a medida. Desde que descubrí el código aborrezco un poco los CMS, si necesitas un diseñador...sílbame.</p>
       <div className="wrapper-progress">
       <div className="progress-bar"></div>
       <div className="pointers">
@@ -483,8 +481,7 @@ const Layout = () => {
 
       <div className="container-button">
 
-      <button className="btn-works">TRABAJOS</button>
-
+     <button className="btn-works"> <a href="#works">TRABAJOS</a> </button>
       </div>
 
 
@@ -493,7 +490,7 @@ const Layout = () => {
 
     <div className={javaClicked ? "java active" : "java"}>
       <h2>Java</h2>
-      <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.</p>
+      <p>Estoy estudiando Desarrollo de aplicaciones web, por tanto he cursado un año entero de Java. Para ser sincero, no es mi devoción, me defiendo con la programación orientada a objetos pero no me considero ningún experto, si estás buscando un desarrollador de Java no soy el más apto. Aún así, si buscas un Full Stack que quiera aprender un poco de todo. ¡Soy tu hombre!</p>
       <div className="wrapper-progress">
       <div className="progress-bar"></div>
       <div className="pointers">
@@ -508,9 +505,7 @@ const Layout = () => {
         <div className="text">
         POO
         </div>
-        <div className="text">
-        Typescript y ES6
-        </div>
+        
 
       </div>
       
@@ -519,8 +514,7 @@ const Layout = () => {
 
       <div className="container-button">
 
-      <button className="btn-works">TRABAJOS</button>
-
+     <button className="btn-works"> <a href="#works">TRABAJOS</a> </button>
       </div>
 
 
@@ -529,7 +523,7 @@ const Layout = () => {
 
     <div className={MongoClicked ? "mongo active" : "mongo"}>
       <h2>Mongo DB</h2>
-      <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.</p>
+      <p>Mongo Db es la base de datos que más utilizo, como me considero un JS Full Stack, utilizo esta bd para crear aplicaciones en react o diferentes páginas que necesiten una base de datos como para la creación de un blog etc. He trabajado con el cloud y también en local.</p>
       <div className="wrapper-progress">
       <div className="progress-bar"></div>
       <div className="pointers">
@@ -539,14 +533,12 @@ const Layout = () => {
       </div>  
       <div className="texto-progress">
         <div className="text">
-          Mongo
+        Mongo
         </div>
         <div className="text">
         Mongoose
         </div>
-        <div className="text">
-        Typescript y ES6
-        </div>
+        
 
       </div>
       
@@ -555,8 +547,7 @@ const Layout = () => {
 
       <div className="container-button">
 
-      <button className="btn-works">TRABAJOS</button>
-
+     <button className="btn-works"> <a href="#works">TRABAJOS</a> </button>
       </div>
 
 
@@ -608,15 +599,15 @@ const Layout = () => {
     <div className="container-items-works">
 
     <div className="item-works">
-    <h2>landdy.io</h2>
+    <h2>Casaalta.cat</h2>
     <div className="container-web-image">
     <img src={landdy} alt="" /> 
     </div>
     <div className="categorias-item">
-      <span>Gatsby</span>
-      <span>ReactJS</span>
-      <span>Tailwind</span>
-      <span>GraphiQl</span>
+      <span>Wordpress</span>
+      <span>Javascript</span>
+      <span>PHP</span>
+      <span>Css</span>
       </div>
    
  
@@ -628,9 +619,60 @@ const Layout = () => {
 
     : null }
 
+
+
+{elaOn ?
+    <div className="container-items-works">
+
+    <div className="item-works">
+    <h2>elanails.com</h2>
+    <div className="container-web-image">
+    <img src={elanails} alt="" /> 
+    </div>
+    <div className="categorias-item">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>Javascript</span>
+      </div>
+   
+ 
+    </div>
+    <div className="angle" onClick={handleAngleEla}>
+    <FaAngleRight />
+    </div>
+    </div>
+
+    : null }
+
     </div>
 
     </div>
+
+
+
+    <footer>
+
+      <div className="container-footer">
+
+        <div className="footer-note">Esta página está diseñada con Gatsby (React). He realizado muchos más trabajos y prototipos, si quieres ver más entra en mi perfil de Github o ponte en contacto conmigo. </div>
+        <div className="social">
+          <a href="https://github.com/anbrela?tab=repositories">          <img src={github} alt="full stack github"/>
+</a>
+          <a href="https://api.whatsapp.com/send?phone=+34678725154&text=Hola!!">          <img src={whatsapp} alt="full stack github"/>
+</a>
+          <a href="https://www.linkedin.com/in/naveiralopezpablo/">          <img src={linkedin} alt="full stack github"/>
+</a>
+
+        </div>
+
+      </div>
+
+
+    </footer>
+
+
+
+
     </div>     
     </>
   )
