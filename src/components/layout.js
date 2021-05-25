@@ -1,4 +1,5 @@
-import React, { useState, createRef, useEffect } from "react"
+
+import React, {useState, createRef, useEffect} from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import "./layout.css"
@@ -11,12 +12,12 @@ import { FaJava } from "react-icons/fa"
 import { FaCss3Alt } from "react-icons/fa"
 import { GrClose } from "react-icons/gr"
 import { IoIosClose } from "react-icons/io"
-import { GrGatsbyjs } from "react-icons/gr"
-import { SiTailwindcss } from "react-icons/si"
-import { GrWordpress } from "react-icons/gr"
-import { FaAngleRight } from "react-icons/fa"
-import lottie from "lottie-web"
-import animationDeveloper from "../animations/developer.json"
+import {GrGatsbyjs} from "react-icons/gr"
+import {SiTailwindcss} from "react-icons/si"
+import {GrWordpress} from "react-icons/gr"
+import {FaAngleRight} from "react-icons/fa"
+import lottie from 'lottie-web';
+import animationDeveloper from '../animations/developer.json';
 import hype from "../images/hype1.png"
 import landdy from "../images/casaalta.png"
 import elanails from "../images/elanails.png"
@@ -25,10 +26,14 @@ import linkedin from "../images/linkedin.svg"
 import whatsapp from "../images/whatsapp.svg"
 import github from "../images/github.png"
 
+
+
+
+
 const Layout = () => {
+
   let animation = createRef()
 
-<<<<<<< HEAD
 
   const [navClicked, setNavClicked] = useState(false);
   const [javascriptClicked, setJavascriptClicked] = useState(false);
@@ -62,42 +67,10 @@ const Layout = () => {
 
     setHypeOn(false);
     setLanndyOn(true);
-=======
-  const [navClicked, setNavClicked] = useState(false)
-  const [javascriptClicked, setJavascriptClicked] = useState(false)
-  const [MongoClicked, setMongoClicked] = useState(false)
-  const [wordpressClicked, setWordpressClicked] = useState(false)
-  const [gatsbyClicked, setGatsbyClicked] = useState(false)
-  const [cssClicked, setCssClicked] = useState(false)
-  const [phpClicked, setPhpClicked] = useState(false)
-  const [tailClicked, setTailClicked] = useState(false)
-  const [nodeClicked, setNodeClicked] = useState(false)
-  const [javaClicked, setJavaClicked] = useState(false)
-  const [buttonClicked, setButtonClicked] = useState(false)
-  const [hypeOn, setHypeOn] = useState(true)
-  const [landdyOn, setLanndyOn] = useState(false)
 
-  //search animation
-  useEffect(() => {
-    const anim = lottie.loadAnimation({
-      container: animation.current,
-      renderer: "svg",
-      loop: true,
-      autoplay: true,
-      animationData: animationDeveloper,
-    })
-
-    return () => anim.destroy() // optional clean up for unmounting
-  }, [animation])
->>>>>>> 875cb199ce2dca5384b05339430cc779a66941dd
-
-  const handleAngleHype = () => {
-    setHypeOn(false)
-    setLanndyOn(true)
   }
 
   const handleAngleLanddy = () => {
-<<<<<<< HEAD
     setLanndyOn(false);
     setElaOn(true);
   }
@@ -105,76 +78,88 @@ const Layout = () => {
   const handleAngleEla = () => {
     setElaOn(false);
     setHypeOn(true);
-=======
-    setLanndyOn(false)
->>>>>>> 875cb199ce2dca5384b05339430cc779a66941dd
   }
+
 
   const handleClick = () => {
-    setNavClicked(!navClicked)
+    setNavClicked(!navClicked);
   }
 
-  const handleJavascriptButton = () => {
-    setJavascriptClicked(true)
-    setButtonClicked(true)
+
+  const handleJavascriptButton= () => {
+    setJavascriptClicked(true);
+    setButtonClicked(true);
+
   }
 
-  const handleCssButton = () => {
-    setCssClicked(true)
-    setButtonClicked(true)
+  const handleCssButton= () => {
+    setCssClicked(true);
+    setButtonClicked(true);
+
   }
 
-  const handlePhpButton = () => {
-    setPhpClicked(true)
-    setButtonClicked(true)
+  const handlePhpButton= () => {
+    setPhpClicked(true);
+    setButtonClicked(true);
+
   }
 
-  const handleGatsbyButton = () => {
-    setGatsbyClicked(true)
-    setButtonClicked(true)
+  const handleGatsbyButton= () => {
+    setGatsbyClicked(true);
+    setButtonClicked(true);
+
   }
 
-  const handleTailButton = () => {
-    setTailClicked(true)
-    setButtonClicked(true)
+  const handleTailButton= () => {
+    setTailClicked(true);
+    setButtonClicked(true);
+
   }
 
-  const handleNodeButton = () => {
-    setNodeClicked(true)
-    setButtonClicked(true)
+  const handleNodeButton= () => {
+    setNodeClicked(true);
+    setButtonClicked(true);
+
   }
 
-  const handleJavaButton = () => {
-    setJavaClicked(true)
-    setButtonClicked(true)
+  const handleJavaButton= () => {
+    setJavaClicked(true);
+    setButtonClicked(true);
+
   }
 
-  const handleWordpressButton = () => {
-    setWordpressClicked(true)
-    setButtonClicked(true)
+  const handleWordpressButton= () => {
+    setWordpressClicked(true);
+    setButtonClicked(true);
+
   }
 
-  const handleMongoButton = () => {
-    setMongoClicked(!MongoClicked)
-    setButtonClicked(true)
+
+
+  const handleMongoButton= () => {
+    setMongoClicked(!MongoClicked);
+    setButtonClicked(true);
+
   }
 
   const handleCloseNav = () => {
-    setNavClicked(!navClicked)
+    setNavClicked(!navClicked);
   }
 
   const handleCloseModal = () => {
-    setJavascriptClicked(false)
-    setWordpressClicked(false)
-    setMongoClicked(false)
-    setButtonClicked(false)
-    setJavaClicked(false)
-    setNodeClicked(false)
-    setGatsbyClicked(false)
-    setTailClicked(false)
-    setPhpClicked(false)
-    setCssClicked(false)
+    setJavascriptClicked(false);
+    setWordpressClicked(false);
+    setMongoClicked(false);
+    setButtonClicked(false);
+    setJavaClicked(false);
+    setNodeClicked(false);
+    setGatsbyClicked(false);
+    setTailClicked(false);
+    setPhpClicked(false);
+    setCssClicked(false);
   }
+ 
+
 
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -188,45 +173,97 @@ const Layout = () => {
 
   return (
     <>
-      <div className="container">
-        <div className="header">
-          <div className="logo">
-            <h2>
-              PABLO <span>NAVEIRA</span>{" "}
-            </h2>
-          </div>
+    <div className="container">
+    <div className="header">
 
-          <div className="text-header">
-            <h2>FULL STACK</h2>
-            <span>DEVELOPER</span>
-          </div>
+    <div className="logo">
+    <h2>PABLO <span>NAVEIRA</span> </h2>  
+    </div> 
 
-          <div
-            className={navClicked ? "nav active" : "nav"}
-            onClick={handleClick}
-          >
-            <div className="ham">
-              <div className={navClicked ? "linea1 active" : "linea1"}></div>
-              <div className={navClicked ? "linea2 active" : "linea2"}></div>
-              <div className={navClicked ? "enlaces active" : "enlaces"}>
-                <li>
-                  {" "}
-                  <a href="#info">SOBRE MÍ</a>{" "}
-                </li>
-                <li>
-                  {" "}
-                  <a href="#skills">HABILIDADES</a>{" "}
-                </li>
-                <li>
-                  {" "}
-                  <a href="#works">TRABAJOS</a>{" "}
-                </li>
-                <button onClick={handleCloseNav}>
-                  <GrClose />
-                </button>
-              </div>
-            </div>
-          </div>
+    <div className="text-header">
+    <h2>FULL STACK</h2>
+    <span>DEVELOPER</span>
+
+    </div>
+
+    <div className={navClicked ? "nav active" : "nav"}  onClick={handleClick}>
+
+    <div className="ham">
+      <div className={navClicked ? "linea1 active" : "linea1"}></div>
+      <div className={navClicked ? "linea2 active" : "linea2"}></div>
+      <div className={navClicked ? "enlaces active" : "enlaces"}>
+        <li> <a href="#info">SOBRE MÍ</a> </li>
+        <li> <a href="#skills">HABILIDADES</a> </li>
+        <li> <a href="#works">TRABAJOS</a> </li>
+        <button onClick={handleCloseNav}><GrClose /></button>
+      </div>
+    </div>
+
+    </div>
+      
+    </div> 
+
+
+    <div className="info" id="info">
+
+    <div className="wrapper-info">
+    
+    <div className="text-info">
+      <h2>UN JEDI DEL FRONT-END </h2>
+      <p>Soy Pablo Naveira, actualmente desarrollador Front-End. Aún así la vida me ha llevado por muchos caminos desde la producción audiovisual (edición de vídeo, fotografía y audio), producción teatral e incluso en el mundo del márketing. Soy un apasionado del SEO y del inbound márketing. Actualmente me dedico a seguir aprendiendo nuevas tecnologías web.</p>
+    </div>
+    <div className="img-info">
+    <img src={me} alt="" />
+
+    </div>
+
+
+    </div>
+
+
+    </div>
+
+
+    <div className="about" id="skills">
+    <div className="titulo-about">
+    <h2>MIS HABILIDADES</h2>
+    </div>  
+    <div className={buttonClicked ? "close-modal active" : "close-modal"} onClick={handleCloseModal}> <IoIosClose /> </div>
+
+    <div className="about-wrapper">
+    
+    <button className={buttonClicked ? "boton1 active" : "boton1"} onClick={handleJavascriptButton}> <DiJavascript1 /> </button>
+    <button className={buttonClicked ? "boton2 active" : "boton2"} onClick={handleTailButton}> <SiTailwindcss /> </button>
+    <button className={buttonClicked ? "boton3 active" : "boton3"} onClick={handleNodeButton}> <FaNodeJs /> </button>
+    <button className={buttonClicked ? "boton4 active" : "boton4"} onClick={handlePhpButton}> <DiPhp /> </button>
+    <button className={buttonClicked ? "boton5 active" : "boton5"} onClick={handleMongoButton}> <DiMongodb /> </button>
+    <button className={buttonClicked ? "boton6 active" : "boton6"} onClick={handleJavaButton}> <FaJava /> </button>
+    <button className={buttonClicked ? "boton7 active" : "boton7"} onClick={handleCssButton}> <FaCss3Alt /> </button>
+    <button className={buttonClicked ? "boton7 active" : "boton7"} onClick={handleGatsbyButton}> <GrGatsbyjs /> </button>
+    <button className={buttonClicked ? "boton7 active" : "boton8"} onClick={handleWordpressButton}> <GrWordpress /> </button>
+
+
+
+    <div className={javascriptClicked ? "javascript active" : "javascript"}>
+      <h2>Javascript</h2>
+      <p>El primer lenguaje de programación por el cuál me interesé, llevo aproximadamente un año con él y he realizado multitud de webs y aplicaciones con Javascript. Tras realizar un master online en Udemy y aprender por mi cuenta sobre Jquery y diferentes librerías de uso diario. He utilizado Scroll Magic y Gsap también en diferentes proyectos para realizar animaciones con Scroll. Si quieres ver más proyectos, ponte en contacto conmigo ;)
+      </p>
+      <div className="wrapper-progress">
+      <div className="progress-bar"></div>
+      <div className="pointers">
+      <div className="pointer"></div>
+      <div className="pointer"></div>  
+      <div className="pointer"></div>  
+      </div>  
+      <div className="texto-progress">
+        <div className="text">
+          Javascript
+        </div>
+        <div className="text">
+        Jquery
+        </div>
+        <div className="text">
+        Typescript y ES6
         </div>
 
       </div>
@@ -296,6 +333,14 @@ const Layout = () => {
         <div className="text">
         Laravel
         </div>
+        <div className="text">
+        Symphony
+        </div>
+
+      </div>
+      
+
+      </div>
 
       <div className="container-button">
 
@@ -518,7 +563,7 @@ const Layout = () => {
     </div>
     </div>
 
-    <div className="works">
+    <div className="works" id="works">
       <div className="container-works">
       <div className="animation" ref={animation}></div>
     <div className="titulo-works">

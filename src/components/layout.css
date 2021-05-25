@@ -1371,7 +1371,15 @@ body {
     bottom: -180px;
   }
 }
-<<<<<<< HEAD
+
+
+a {
+  text-decoration: none;
+  color: var(--negro);
+}
+
+
+
 
 
 .container-footer {
@@ -1409,5 +1417,3 @@ text-align: center;
 
 
 
-=======
->>>>>>> 875cb199ce2dca5384b05339430cc779a66941dd

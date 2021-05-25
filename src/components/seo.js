@@ -42,7 +42,7 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: "Pablo Naveira - Web Lover",
         },
         {
           property: `og:description`,
