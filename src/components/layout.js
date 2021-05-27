@@ -2,6 +2,7 @@ import React, { useState, createRef, useEffect } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import "./layout.css"
+import Seo from "../components/seo"
 import about from "../images/about.png"
 import { DiJavascript1 } from "react-icons/di"
 import { FaLanguage, FaNodeJs } from "react-icons/fa"
@@ -25,7 +26,7 @@ import linkedin from "../images/linkedin.svg"
 import whatsapp from "../images/whatsapp.svg"
 import github from "../images/github.png"
 
-const Layout = () => {
+const Layout = ({ children }) => {
   let animation = createRef()
 
   const [navClicked, setNavClicked] = useState(false)
@@ -141,6 +142,9 @@ const Layout = () => {
       site {
         siteMetadata {
           title
+          description
+          author
+          secondTitle
         }
       }
     }
@@ -150,6 +154,11 @@ const Layout = () => {
     <>
       <div className="container">
         <div className="header">
+          <Seo
+            title={data.site.siteMetadata.title}
+            description={data.site.siteMetadata.description}
+            secondTitle={data.site.siteMetadata.secondTitle}
+          />
           <div className="logo">
             <h2>
               PABLO <span>NAVEIRA</span>{" "}

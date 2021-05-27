@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Pablo Naveira - Web LOVER`,
+    title: `Pablo Naveira`,
     description: `Desarrollador Full Stack javascript, diseñador UX y UI.`,
     author: `@pablonaveira`,
+    secondTitle: "Front End JS Full Stack",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
